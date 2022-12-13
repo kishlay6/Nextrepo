@@ -4,7 +4,11 @@
 #RUN  mvn dependency:go-offline -B
 #RUN  mvn package
 #CMD ["node", "src/index.js"]
-FROM openjdk:8-jre-alpine3.9
-WORKDIR /gaurav
-COPY target/Java_project-1 /project.jar
-CMD ["java", "-jar", "/demo.jar"]
+#FROM openjdk:8-jre-alpine3.9
+#WORKDIR /gaurav
+#COPY target/Java_project-1 /project.jar
+#CMD ["java", "-jar", "/demo.jar"]
+FROM openjdk:8
+EXPOSE 8080
+ADD target/maven_created.jar maven_created.jar
+ENTRYPOINT ["java","-jar","/maven_created.jar"]
