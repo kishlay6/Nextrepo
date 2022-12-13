@@ -60,6 +60,7 @@
 
       </plugins>
     </pluginManagement>
+    <finalName>maven_created</finalName>
   </build>
 
 </project>
