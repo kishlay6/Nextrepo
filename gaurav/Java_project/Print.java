@@ -5,5 +5,6 @@ Public class Simple{
     {  
      System.out.println("Hello Java");  
      System.out.println("abc");
+        System.out.println("Hey There!");
     }  
 }  
